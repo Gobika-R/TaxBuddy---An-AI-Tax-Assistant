@@ -1,0 +1,74 @@
+.chat-navigation {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.nav-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-box {
+  padding: 2.5rem;
+  border-radius: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-box.mentor {
+  background: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.nav-box.brain {
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.05));
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.nav-box-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.mentor .nav-box-icon {
+  color: #3B82F6;
+}
+
+.brain .nav-box-icon {
+  color: #8B5CF6;
+}
+
+.nav-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.nav-box p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.nav-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.nav-box:hover .nav-box-icon {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .nav-boxes {
+    grid-template-columns: 1fr;
+  }
+}
